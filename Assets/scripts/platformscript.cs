@@ -9,6 +9,8 @@ public class platformscript : MonoBehaviour
     private bool isJumping = false;
 
     private Rigidbody2D rb;
+    public Animator animator;
+    float horizontalMovement = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,10 @@ public class platformscript : MonoBehaviour
     {
      //code for horizontal movement
      float horizontalInput = Input.GetAxis("Horizontal");
+     horizontalMovement = Input.GetAxis("Hovizontal") * moveSpeed;
      Vector2 moveVector = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+
+     animator.setFloat("speed", horizontalMovement);
 
      //player is jumping
      if(Input. GetButtonDown("Jump") && !isJumping){
@@ -29,6 +34,13 @@ public class platformscript : MonoBehaviour
      }
 
      rb.velocity = moveVector;
+     
+     if(horizontalInput < 0){
+      transform.localScale = new Vector3(-1, 1, 1);
+     } else if(horizontalInput > 0){
+      transform.localScale = new Vector3(1, 1, 1);
+     }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
