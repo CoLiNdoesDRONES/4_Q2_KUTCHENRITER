@@ -22,10 +22,10 @@ public class platformscript : MonoBehaviour
     {
      //code for horizontal movement
      float horizontalInput = Input.GetAxis("Horizontal");
-     horizontalMovement = Input.GetAxis("Hovizontal") * moveSpeed;
+     horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed;
      Vector2 moveVector = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
-     animator.setFloat("speed", horizontalMovement);
+     animator.SetFloat("speed", Mathf.Abs(horizontalMovement));
 
      //player is jumping
      if(Input. GetButtonDown("Jump") && !isJumping){
