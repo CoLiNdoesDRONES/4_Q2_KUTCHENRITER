@@ -21,7 +21,9 @@ public class impro_parralax : MonoBehaviour
         transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
         float temp = (cam.transform.position.x * (1 - parallaxEffect));
         if(temp > startPos + length){
-            startPos +=
+            startPos += length;
+        }else if(temp < startPos - length){
+            startPos -= length;
         }
     }
 }

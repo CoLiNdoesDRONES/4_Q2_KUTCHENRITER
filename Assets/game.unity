@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 27095004}
   - component: {fileID: 27095003}
   - component: {fileID: 27095005}
+  - component: {fileID: 27095006}
   m_Layer: 0
   m_Name: background
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,8 +202,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27095002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.918, y: 2.2199, z: -0.18974}
-  m_LocalScale: {x: 6.8613567, y: 5.4425397, z: 1}
+  m_LocalPosition: {x: 0.5311, y: 12.9196, z: -0.18974}
+  m_LocalScale: {x: 7.8560085, y: 13.36851, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1337683063}
@@ -224,6 +225,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1148483659}
   prallaxEffect: 0.5
+--- !u!114 &27095006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27095002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4283f0a8bfeb9df48b9d9e214b91707f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1148483659}
+  parallaxEffect: 0.5
 --- !u!1 &463552808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,7 +1979,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.97178245, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1979,9 +1994,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 41.21377
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.0549927
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2038,6 +2053,7 @@ GameObject:
   - component: {fileID: 1198029011}
   - component: {fileID: 1198029013}
   - component: {fileID: 1198029012}
+  - component: {fileID: 1198029014}
   m_Layer: 0
   m_Name: 1 (1)
   m_TagString: MainCamera
@@ -2053,8 +2069,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198029010}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 4.78, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.93168, y: -0.00997, z: 0}
+  m_LocalScale: {x: 1.0548139, y: -0.9827521, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 27095004}
@@ -2126,6 +2142,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1198029014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198029010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4283f0a8bfeb9df48b9d9e214b91707f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1148483659}
+  parallaxEffect: 0.5
 --- !u!1 &1337683062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,6 +2167,7 @@ GameObject:
   - component: {fileID: 1337683063}
   - component: {fileID: 1337683064}
   - component: {fileID: 1337683065}
+  - component: {fileID: 1337683066}
   m_Layer: 0
   m_Name: 1
   m_TagString: MainCamera
@@ -2152,8 +2183,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337683062}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -4.79, y: -0.01145, z: 0}
-  m_LocalScale: {x: 1, y: 1.0085114, z: 1}
+  m_LocalPosition: {x: -4.4429, y: 0.00777, z: 0}
+  m_LocalScale: {x: 0.8346756, y: -0.9959327, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 27095004}
@@ -2212,6 +2243,20 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1337683065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337683062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4283f0a8bfeb9df48b9d9e214b91707f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1148483659}
+  parallaxEffect: 0.5
+--- !u!114 &1337683066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
